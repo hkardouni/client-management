@@ -12,6 +12,9 @@ const router = require('../routes/router')
 dotenv.config()
 
 app.use(cors())
+app.use(cors({
+    origin: 'https://client-management-backend.vercel.app/'
+}))
 app.use(express.json())
 app.use(router)
 
