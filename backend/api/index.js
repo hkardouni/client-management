@@ -22,6 +22,9 @@ app.use(router)
 
 app.use(express.static(path.join(__dirname, '../front-end/build')))
 
+app.get("/", (req, res) => {
+    res.json("HELLO")
+}
 app.get('*', (req,res) => {
     res.sendFile(__dirname, '../front-end/build', 'index.html')
 })
