@@ -13,7 +13,9 @@ dotenv.config()
 
 app.use(cors())
 app.use(cors({
-    origin: 'https://client-management-backend.vercel.app/'
+    origin: 'https://client-management-backend.vercel.app/',
+    method: ["POST", "GET"],
+    credentials: true
 }))
 app.use(express.json())
 app.use(router)
